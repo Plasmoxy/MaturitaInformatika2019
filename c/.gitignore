@@ -1,4 +1,7 @@
 
+# vystupy
+*.bin
+
 # Created by https://www.gitignore.io/api/c,c++,assembler
 # Edit at https://www.gitignore.io/?templates=c,c++,assembler
 
