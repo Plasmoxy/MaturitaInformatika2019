@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <limits.h>
+#include <errno.h>
 
 const int NSTR = 100;
 
@@ -9,10 +9,13 @@ int faktorial(int n) {
 }
 
 int main() {
-    printf("Zadajte cislo: ");
+    char* endptr;
     char str[NSTR];
+
+    printf("Zadajte cislo: ");
     fgets(str, NSTR, stdin);
-
-
-    printf("%d\n", atoi(str));
+    
+    long cislo = strtol(str, &endptr, 10);
+    printf("%c\n", *endptr);
+    printf("c = %ld\n", cislo);
 }
