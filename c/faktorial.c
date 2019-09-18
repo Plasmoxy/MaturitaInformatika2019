@@ -1,14 +1,18 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <limits.h>
 
-int faktorial(n) {
+const int NSTR = 100;
+
+int faktorial(int n) {
     return 0;
 }
 
 int main() {
-    char str[100];
-    printf("Zadajte cislo");
-    fgets(str, 4, stdin);
-    printf("%s", str);
-    printf("%d", LONG_MAX);
+    printf("Zadajte cislo: ");
+    char str[NSTR];
+    fgets(str, NSTR, stdin);
+
+
+    printf("%d\n", atoi(str));
 }
