@@ -14,8 +14,13 @@ int main() {
 
     printf("Zadajte cislo: ");
     fgets(str, NSTR, stdin);
-    
+
+    // zadanie cisla with error checking
     long cislo = strtol(str, &endptr, 10);
-    printf("%c\n", *endptr);
+    if ( *(endptr+1) != 0 ) {
+        printf("Musite zadat cislo!\n");
+        return -1;
+    }
+
     printf("c = %ld\n", cislo);
 }
