@@ -7,3 +7,5 @@ add_executable(slova slova.c)
 
 add_executable(nasobilka nasobilka.c)
 target_link_libraries(nasobilka m)
+
+add_executable(znamka_pat znamka_pat.c)
