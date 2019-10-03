@@ -1,0 +1,1 @@
+print("Je", ["jar", "leto", "jeseň", "zima"][int(int(input("Zadaj cislo mesiaca: "))/12*4)-1])
