@@ -8,10 +8,14 @@ v2 = input("Zadajkte druhy retazec: ")
 
 def pomiesany_retazec(a, b):
     out = ""
-    minl = min(len(a), len(b))
+    
+    # nech a je kratsi retazec!
+    if len(a) > len(b):
+        a, b = b, a
 
-    for i in range(0, minl):
-        out += a[i] + b[i]
+    for i in range(0, len(b)):
+        out += a[i] if i < len(a) else ""
+        out += b[i]
     
     return out
 
