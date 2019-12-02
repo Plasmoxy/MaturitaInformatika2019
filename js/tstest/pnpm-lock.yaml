@@ -1,0 +1,32 @@
+dependencies:
+  '@types/jquery': 3.3.31
+  jquery: 3.4.1
+devDependencies:
+  typescript: 3.7.2
+lockfileVersion: 5.1
+packages:
+  /@types/jquery/3.3.31:
+    dependencies:
+      '@types/sizzle': 2.3.2
+    dev: false
+    resolution:
+      integrity: sha512-Lz4BAJihoFw5nRzKvg4nawXPzutkv7wmfQ5121avptaSIXlDNJCUuxZxX/G+9EVidZGuO0UBlk+YjKbwRKJigg==
+  /@types/sizzle/2.3.2:
+    dev: false
+    resolution:
+      integrity: sha512-7EJYyKTL7tFR8+gDbB6Wwz/arpGa0Mywk1TJbNzKzHtzbwVmY4HR9WqS5VV7dsBUKQmPNr192jHr/VpBluj/hg==
+  /jquery/3.4.1:
+    dev: false
+    resolution:
+      integrity: sha512-36+AdBzCL+y6qjw5Tx7HgzeGCzC81MDDgaUP8ld2zhx58HdqXGoBd+tHdrBMiyjGQs0Hxs/MLZTu/eHNJJuWPw==
+  /typescript/3.7.2:
+    dev: true
+    engines:
+      node: '>=4.2.0'
+    hasBin: true
+    resolution:
+      integrity: sha512-ml7V7JfiN2Xwvcer+XAf2csGO1bPBdRbFCkYBczNZggrBZ9c7G3riSUeJmqEU5uOtXNPMhE3n+R4FA/3YOAWOQ==
+specifiers:
+  '@types/jquery': ^3.3.31
+  jquery: ^3.4.1
+  typescript: ^3.7.2
