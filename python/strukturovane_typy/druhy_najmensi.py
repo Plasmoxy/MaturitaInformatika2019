@@ -1,7 +1,7 @@
 
 def druhy_najmensi(l):
-    druhy = l[1] # rozdielne indexy!!!
     prvy = l[0]
+    druhy = l[1] # rozdielne indexy!!!
 
     for c in l:
         if c < prvy:
