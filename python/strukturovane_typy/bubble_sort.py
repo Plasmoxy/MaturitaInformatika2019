@@ -7,6 +7,7 @@ Posledny uz nema kontrolovat potom neskor.
 
 from random import sample, randint
 from typing import *
+from time import time
 
 def bublo_srot(l: List[int]) -> List[int]:
     ll = len(l)
@@ -26,16 +27,21 @@ def bublo_srot(l: List[int]) -> List[int]:
         # ak dana hodnota uz dobublala (sme na konci), limituj dlzku aby sme uz neoverovali posledny prvok
         last += 1
 
-        print(f"bubble sort l = {l}, hranica ukonceneho sortovania(ll-last) = {ll-last}")
+        #print(f"bubble sort l = {l}, hranica ukonceneho sortovania(ll-last) = {ll-last}")
         
         # ukonci ak nebolo nic vymenene
         if vymeny == 0:
-            print(f"[Prebehlo {iter_counter} iteracii (vymen).]")
+            #print(f"[Prebehlo {iter_counter} iteracii (vymen).]")
             break
     
     return l
 
-lcisla = [randint(0, 10) for i in range(0, 11)]
-print(f"Cisla = {lcisla}, len={len(lcisla)}")
+lcisla = [randint(0, 10000) for i in range(0, 10000)]
+#print(f"Cisla = {lcisla}, len={len(lcisla)}")
 
-print(f"Sorted = {bublo_srot(lcisla)}")
+pred = time()
+sorted = bublo_srot(lcisla)
+potom = time()
+
+#print(f"Sorted = {sorted}")
+print(f"Cas trvania: {potom-pred}")
