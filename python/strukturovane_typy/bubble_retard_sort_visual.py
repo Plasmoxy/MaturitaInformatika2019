@@ -29,12 +29,12 @@ def draw_list(c: Canvas, l: List[int]):
     dy = H/maxl
 
     for i in range(0, lenl):
-        kolor = "#%02x%02x%02x" % tuple(map(lambda t: int(255*t), hsv_to_rgb(l[i]/maxl, 1.0, 1.0)))
+        kolor = "#%02x%02x%02x" % tuple(map(lambda t: int(255*t), hsv_to_rgb((l[i])/(maxl + 50), 1.0, 1.0)))
         c.create_rectangle(i*dx, H, i*dx + dx, H - l[i]*dy, fill=kolor, outline=kolor)
 
     
 # sample zoznam cisel pre sortovaci algoritmus
-ls = [randrange(0, 300) for i in range(0, 300)]
+ls = [randrange(0, 300) for i in range(0, 1000)]
 ls_i = 0
 ls_last = 0
 ls_len = len(ls)
@@ -93,7 +93,7 @@ def loop():
     ####################################################
 
     root.update()
-    root.after(1, loop)
+    root.after(0, loop)
 
 loop()
 root.mainloop()
