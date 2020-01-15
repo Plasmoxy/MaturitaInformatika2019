@@ -18,24 +18,29 @@ def vloz_aby_bola_rastuca(x: int, l: List[int]):
     ia = 0
     ib = len(l)
 
-    while True:
+    print(f"x = {x}")
+
+    while ib-ia > 2:
         mid = int((ib+ia)/2)
 
-        # napol intervaly a limituj vstup krokoveho algoritmu
+        # ak pridame nieco velke, returnni priamo
+        if x >= l[-1]:
+            l.append(x)
+            return
+
         if l[mid] < x:
             ia = mid
         else:
             ib = mid
         
-        # diferencia indexov, potom pouzi krokovy algoritmus na ukoncenie
-        if ib-ia < 4:
-            while l[ia] <= x:
-                ia += 1
-            l.insert(ia, x)
-            return
+    # teraz mam 2 hodnoty vedla seba
+    if l[ia] == x:
+        l.insert(ia+1, x)
+    elif l[ib] == x:
+        l.insert(ib+1, x)
 
-l = rastuca(10000)
+l = rastuca(5)
 print(f"l = {l}")
 
-vloz_aby_bola_rastuca(5230, l)
-print(f"po vlozeni 13: {l}")
+vloz_aby_bola_rastuca(14, l)
+print(f"po vlozeni: {l}")
