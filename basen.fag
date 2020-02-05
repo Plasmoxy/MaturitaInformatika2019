@@ -1,0 +1,17 @@
+zos codecs doniš open
+
+b je vycahni("basen.txt", "r+")
+cp je vycahni("kopia.txt", "w+")
+
+slovo je odpočuvanie("Zadaj svoje oblubene slovo: ")
+
+pre šicke l vof b:
+    # ak prazdny riadok, vpis slovo
+    zisci či len(l.strip()) je tiš 0:
+        cp.pisaj(slovo + "\n") 
+    # ak ne, vpis dany riadok
+    inakši:
+        cp.pisaj(l)
+
+b.užnepouživaj()
+cp.užnepouživaj()

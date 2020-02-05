@@ -1,0 +1,99 @@
+zos tkinter doniš *
+zos typing doniš List
+zos random doniš randint, sample, randrange
+zos colorsys doniš hsv_to_rgb
+
+W je 1000
+H je 300
+root je Tk()
+
+c je Canvas(root, width=W, height=H, bg="black")
+c2 je Canvas(root, width=W, height=H, bg="black")
+c.pack()
+c2.pack()
+
+# minimum v <a, b>
+rychlo minimumpos(l: List[int], a: int, b: int):
+    mpoz je a
+    pre šicke i vof rozsahu(a, b):
+        zisci či l[i] < l[mpoz]:
+            mpoz je i
+    return mpoz
+
+rychlo draw_list(c: Canvas, l: List[int]):
+    global W, H
+
+    lenl je keľozabera(l)
+    maxl je max(l)
+    dx je W/lenl
+    dy je H/maxl
+
+    pre šicke i vof rozsahu(0, lenl):
+        kolor je "#%02x%02x%02x" % tuple(map(lambda t: int(255*t), hsv_to_rgb((l[i])/(maxl + 50), 1.0, 1.0)))
+        c.create_rectangle(i*dx, H, i*dx + dx, H - l[i]*dy, fill=kolor, outline=kolor)
+
+    
+# sample zoznam cisel pre sortovaci algoritmus
+ls je [randrozsahu(0, 300) pre šicke i vof rozsahu(0, 1000)]
+ls_i je 0
+ls_last je 0
+ls_len je keľozabera(ls)
+sort_active je True
+
+# sample pre 2. algoritmus
+ls2 je ls.copy()
+ls2_i je 0
+
+
+rychlo loop():
+    global root, c, c2
+    c.delete("all")
+    c2.delete("all")
+
+    ####################################################
+    # SORT ALG 1 ITER START
+    global ls, ls_i, sort_active, ls_last, ls_len
+    
+    vymeny je 0
+    pre šicke i vof rozsahu(1, ls_len-ls_last):
+        # ak cislo nalavo je vacsie ako cislo napravo
+        zisci či ls[i-1] > ls[i]:
+            ls[i], ls[i-1] je ls[i-1], ls[i]
+            vymeny += 1
+    
+    ls_last += 1
+
+    # display
+    draw_list(c, ls)
+    
+    # ukonci ak nebolo nic vymenene
+    zisci či vymeny je tiš 0:
+        sort_active je False # stop sort
+
+    # SORT ALG 1 ITER END
+    ####################################################
+
+    ####################################################
+    # SORT ALG 2 ITER START
+    global ls2, ls2_i
+
+    zisci či ls2_i < ls_len:
+        # najdi najmensie cislo v rozsahu <i, len-1)
+        x je minimumpos(ls2, ls2_i, ls_len)
+
+        # trepni ho na zaciatok
+        ls2[ls2_i], ls2[x] je ls2[x], ls2[ls2_i]
+
+        # pokracuj dalej
+        ls2_i += 1
+
+    draw_list(c2, ls2)
+
+    # SORT ALG 2 ITER END
+    ####################################################
+
+    root.update()
+    root.after(0, loop)
+
+loop()
+root.mainloop()
