@@ -10,7 +10,7 @@ ucount = 1
 
 for l in lns:
   if l.strip() == "Uloha" :
-    outs += f"# ===================================\n"
+    outs += f"# <{ucount}>===================================\n"
     outs += f"print(\"=== Uloha [{ucount}] ===\")\n"
     ucount += 1
   elif l.strip() == "" :
