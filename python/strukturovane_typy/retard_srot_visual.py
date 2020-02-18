@@ -29,23 +29,33 @@ def draw_list(l: List[int]):
         c.create_rectangle(i*dx, H, i*dx + dx, H - l[i]*dy, fill="cyan", outline="cyan")
 
     
-# sample zoznam cisel pre sortovaci algoritmus
 ls = sample(range(0, 200), 200)
 ls_i = 0
 ls_len = len(ls)
 
 def loop():
-    global root, c, ls, ls_i
+    global root, c, ls
     c.delete("all")
 
     # SORT ALG ITER START
-    
-    
+    global ls_i
+
+    if ls_i < ls_len:
+        # najdi najmensie cislo v rozsahu <i, len-1)
+        x = minimumpos(ls, ls_i, ls_len)
+
+        # trepni ho na zaciatok
+        ls[ls_i], ls[x] = ls[x], ls[ls_i]
+
+        # pokracuj dalej
+        ls_i += 1
+
+    draw_list(ls)
 
     # SORT ALG ITER END
 
     root.update()
-    root.after(0, loop)
+    root.after(1, loop)
 
 loop()
 root.mainloop()
