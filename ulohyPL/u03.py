@@ -33,5 +33,5 @@ def klik(event):
 
 canvas.bind("<Button-1>", klik) # klik BEZ ZATVORIEK ked davam do canvas.bind
 
-vykresli(teraz_povel) # prvy povel treba vykreslit manualne
+vykresli(teraz_povel) # prvy povel treba vykreslit manualne!!!
 canvas.mainloop() # TOTO NEMUSIS PISAT AK POUZIVAS IDLE
