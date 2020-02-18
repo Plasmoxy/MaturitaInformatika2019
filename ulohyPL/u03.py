@@ -10,7 +10,7 @@ teraz_povel = 0
 
 def vykresli(povel):
     global canvas
-    canvas.delete("all") # vymaze canvas
+    canvas.delete("all") # vymaze canvas CELY
 
     if povel == 0: # cervena
         canvas.create_oval(20, 20, 60, 60, fill="red")
@@ -23,7 +23,7 @@ def vykresli(povel):
         canvas.create_oval(20, 60, 60, 100, fill="orange")
 
 def klik(event):
-    global teraz_povel # ak chcem menit premennu vo funkcii, musim ju zaregistrovat cez global
+    global teraz_povel # ak chcem menit premennu vo funkcii, musim najprv dat global na zaciatku funkcie
     teraz_povel += 1 # prida 1 ku povelu = zmen na dalsi povel
 
     if teraz_povel == 4: # povel 4 nemame, tak zmen naspet na 0 (cervena sama)
