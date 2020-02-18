@@ -56,7 +56,7 @@ def loop():
     # SORT ALG ITER END
 
     root.update()
-    root.after(1, loop)
+    root.after(0, loop)
 
 loop()
 root.mainloop()
