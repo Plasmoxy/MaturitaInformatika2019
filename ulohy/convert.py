@@ -13,7 +13,7 @@ while i < len(usplt):
   ustr = usplt[i].strip()
 
   if ustr.strip() != "":
-    f = open(f"./ulohy/u{str(i).zfill(2)}.py", "w+", "utf-8")
+    f = open(f"./Ulohy/u{str(i).zfill(2)}.py", "w+", "utf-8")
     f.write(f"# === Úloha {i}===\r\n")
     ulns = ustr.split("\r\n")
     for l in ulns:
