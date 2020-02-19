@@ -2,14 +2,14 @@
 # Napíšte program, ktorý  nájde v súbore vzor.txt najdlhšie slovo, vypíše ho a vypíše aj číslo riadka, na ktorom sa nachádza.
 
 f = open("text.txt", "r")
-riadky = f.readlines() # všetky riadky
+riadky = f.read().split("\n") # všetky riadky
 
 najdlhsie_slovo = ""
 riadok_najdlhsieho = 0
 
 for i_riadka in range(0, len(riadky)):
-    orezany_r = riadky[i_riadka].strip() # prec s \n na konci riadka
-    slova_v_riadku = orezany_r.split(" ") # rozdel podla medzier
+    riadok = riadky[i_riadka]
+    slova_v_riadku = riadok.split(" ") # rozdel podla medzier
 
     for slovo in slova_v_riadku:
         if len(slovo) > len(najdlhsie_slovo):

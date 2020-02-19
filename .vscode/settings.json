@@ -2,7 +2,7 @@
     "files.associations": {
         "iostream": "cpp"
     },
-    "python.pythonPath": "C:\\Users\\seboh\\AppData\\Local\\Programs\\Python\\Python38\\python.exe",
+    "python.pythonPath": "C:\\Users\\maturita2019\\AppData\\Local\\Programs\\Python\\Python38-32\\python.exe",
     "python.linting.pylintEnabled": true,
     "python.linting.enabled": true
 }
