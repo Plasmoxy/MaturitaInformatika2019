@@ -5,3 +5,9 @@
 # 2	2	4	6
 # 3	3	6	9
 
+c = int(input("Zadajte cislo: "))
+
+for y in range(1, c+1):
+  for x in range(1, c+1):
+    print(f"{x*y:3}", end="")
+  print()
