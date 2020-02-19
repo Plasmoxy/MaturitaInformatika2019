@@ -10,7 +10,9 @@
     - vŽdy môže používať zbernicu len jeden v danom čase
     - Počítače súťažia medzi sebou = Ethernet
     - náhodne sa vyberie že kto bude mať v danom intervale zbernicu
+    - príklad Ethernet
     
 - kruhová sieť: 
     - typ kruhovej siete: **Token ring** = spôsob prístupu k prenosovému médiu
          - kto má token, môže vysielať
+
