@@ -1,8 +1,0 @@
-{
-    "files.associations": {
-        "iostream": "cpp"
-    },
-    "python.pythonPath": "C:\\Users\\seboh\\AppData\\Local\\Programs\\Python\\Python38\\python.exe",
-    "python.linting.pylintEnabled": true,
-    "python.linting.enabled": true
-}
