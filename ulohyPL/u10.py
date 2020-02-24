@@ -18,8 +18,10 @@ suma = 0 # suma vsetkych hmotnosti veci
 i = 0 # pocitadlo veci
 
 while True:
+  # hej tbh staci vam iba h = float(input("Hmotnost veci: "))
+  # ale ja to mam fancy
   h = float(input(f"Hmotnost {i+1}. veci (zostava vam {(nosnost - suma):0.2f} kg) -> "))
-
+  
   # zistim najprv ci netreba ukoncit zadavanie
   if h == 0: # ukoncene vyhladavanie
     break 
