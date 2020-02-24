@@ -1,6 +1,6 @@
 # === Úloha 7===
 # Napíšte program, ktorý vymení v postupnosti náhodne vygenerovaných reálnych čísel najmenšie a najväčšie číslo.
-# -> sú tie čísla odlišné ?? čo keď máme 2x to isté najmenšie číslo ?
+# sebova poznamka: -> sú tie čísla odlišné ?? čo keď máme 2x to isté najmenšie číslo ?
 
 from random import randint
 
