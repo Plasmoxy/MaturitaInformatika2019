@@ -78,3 +78,38 @@
 
 
 
+# Hardware
+- **technické vybavenie počítača**
+- procesor (CPU), matičná doska, grafická karta (GPU), RAM (Random Acces Memory), napájací zdroj, oprická mechanika, HDD, SSD, dalšie rozširujúce karty, myš, klávesnica, monitor, tlačiareň, slúchadlá, reproduktory
+- **CPU**
+    - mikroprocesor, integrovaný obvod, obsahuje niekoľko desitok miliónov tranzistorov
+    - **dve základné časti**
+        - riadiaca jednotka
+        - aritmeticko-logická jednotka (ALU)
+
+- **tranzistor**
+    - polovodičová súčiastka
+    - PNP alebo NPN
+    - vieme vytvárať logické obovody
+
+- **MOBO**
+    - chipset, typ socketu, pci PCIe, USB porty, integrovaná grafická karta, zvuková karty, BIOS
+    - **princíp práce**
+        - **4 takty** - načítanie, rozkodovanie, komunikovanie s RAM, vstupno - vystupne zariadenie
+
+- **GPU**
+    - generuje signaly pre monitor, podla obsahu video pamäte (grafické rozlíšenie), do vdieopamäte zapisuje procesor
+    - pri integrovanej grafickej karte môžeme veľkosť vyhradenej pamäte pre jej činnosť môžeme nastaviť v BIOS-e
+
+# Suborove systemy n shit
+
+- FAT - File Allocation Table
+    - = Tabuľka umiestnenia súborov (na začiatku niekde v pamäťovom priestore)
+    - meno + jeho adresa v dátovej časti pamäti
+- NTFS vs FAT32 (používame bežne vo Windowse) ?
+    - ext4 je podobné ako NTFS
+    - vo FAT32 nie sú práva ku súborom
+    - vo FAT32 nemôže byť súbor väčší ako 4 GB
+    - oprávnenia: ![](permissions.png)
+- čo je formátovanie ?
+    - pri formátovaní sa vytvorí nová tabuľka súborového systému
