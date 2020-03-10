@@ -3,8 +3,6 @@
 
 from random import randint
 
-priklad_v = [randint(0, 255)/100 for i in range(4*12)] # 4 tyzdne pre kazdy mesiac
-
 def najvyssie(vydavky):
   i_najvisieho = 0
 
@@ -12,8 +10,9 @@ def najvyssie(vydavky):
     if vydavky[i] > vydavky[i_najvisieho]:
       i_najvisieho = i
   
-  return i_najvisieho + 1
+  return i_najvisieho + 1 # na začiatku nemáme 0ty týždeň, ale prvý !
 
+priklad_v = [randint(0, 255)/100 for i in range(4*12)] # 4 tyzdne pre kazdy mesiac
 priklad_naj_tyzden= najvyssie(priklad_v)
 
 print(f"vyd = {priklad_v}")
