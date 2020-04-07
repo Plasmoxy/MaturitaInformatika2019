@@ -1,5 +1,6 @@
 
 # Siete
+
 - IP adresa = 4 miestne cislo, identifikator pocitaca v sieti, 255.255.255.255 max
     - 255.255.255.0 = Cčková sieť
     - 255.255.0.0 = B-čková sieť
