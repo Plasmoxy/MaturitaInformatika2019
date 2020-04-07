@@ -16,7 +16,7 @@
     - stromová sieť: viacero switchov poprepájaných
     - zbernicová sieť: počítače súťažia o zbernicu
         - vŽdy môže používať zbernicu len jeden v danom čase
-        - Počítače súťažia medzi sebou = Ethernet
+        - Počítače súťažia medzi sebou -> Ethernet = spôsob prístupu ku prenosovému médiu
         - náhodne sa vyberie že kto bude mať v danom intervale zbernicu
         - príklad Ethernet
         
@@ -51,4 +51,65 @@
     - DNS - DNS servery - domain name system - systém doménových mien
     - prideľovanie mien ku ip adrese
     - DNS server - má tabuľky mien a IP adries
-    
+
+- média pri prenose v sieti:
+    - metalické kable
+    - optické vlákna
+    - elektromagnetické vlnenie
+
+- TLD (top level domain) = doména prvej úrovne = .sk, .cz, .com
+
+- ako získam doménu 2. úrovne?
+    - oslovím registrátora
+    - registrátor sa pokúsi zaregistrovať túto doménu s poskytovateľom domény
+
+- ked nejde net: checc DNS servery 8.8.8.8 google server, checc ip adresu
+- DHCP - Dynamic Host Configuration Protocol
+    - protokol na automatické prideľovanie IP adries zariadeniam resp. sieťovým kartám
+    - DHCP server = dynamicky priraďuje IP adresy zariadeniam
+    - princíp: karta vyšle cez broadcast adresu (255.255.255.255 alebo ipsiete a na konci 255) požiadavku o pridelenie IP adresy 
+    - všetky zariadenia v sieti počúvaju na tej broadcast adrese, ak je v sieti DHCP server, tak obslúži požiadavku
+
+- FTP - file transfer protocol
+- pop3/imap = emaily
+- SMTP - posielanie emailov na email server
+- SSH - secure shell - vzdialené pripojenie (šifrované)
+- telnet - vzdialené pripojenie
+
+
+
+# Hardware
+- **technické vybavenie počítača**
+- procesor (CPU), matičná doska, grafická karta (GPU), RAM (Random Acces Memory), napájací zdroj, oprická mechanika, HDD, SSD, dalšie rozširujúce karty, myš, klávesnica, monitor, tlačiareň, slúchadlá, reproduktory
+- **CPU**
+    - mikroprocesor, integrovaný obvod, obsahuje niekoľko desitok miliónov tranzistorov
+    - **dve základné časti**
+        - riadiaca jednotka
+        - aritmeticko-logická jednotka (ALU)
+
+- **tranzistor**
+    - polovodičová súčiastka
+    - PNP alebo NPN
+    - vieme vytvárať logické obovody
+
+- **MOBO**
+    - chipset, typ socketu, pci PCIe, USB porty, integrovaná grafická karta, zvuková karty, BIOS
+    - **princíp práce**
+        - **4 takty** - načítanie, rozkodovanie, komunikovanie s RAM, vstupno - vystupne zariadenie
+
+- **GPU**
+    - generuje signaly pre monitor, podla obsahu video pamäte (grafické rozlíšenie), do vdieopamäte zapisuje procesor
+    - pri integrovanej grafickej karte môžeme veľkosť vyhradenej pamäte pre jej činnosť môžeme nastaviť v BIOS-e
+
+# Suborove systemy n shit
+
+- FAT - File Allocation Table
+    - = Tabuľka umiestnenia súborov (na začiatku niekde v pamäťovom priestore)
+    - meno + jeho adresa v dátovej časti pamäti
+- NTFS vs FAT32 (používame bežne vo Windowse) ?
+    - ext4 je podobné ako NTFS
+    - vo FAT32 nie sú práva ku súborom
+    - vo FAT32 nemôže byť súbor väčší ako 4 GB
+    - oprávnenia: ![](permissions.png)
+- čo je formátovanie ?
+    - pri formátovaní sa vytvorí nová tabuľka súborového systému
