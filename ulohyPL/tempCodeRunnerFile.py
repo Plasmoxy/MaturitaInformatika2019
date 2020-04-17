@@ -1,2 +1,2 @@
-ge(0, 100) ]
-print(f"Postupnost: {l}")
+
+print(f"Nepárne ({len(neparne)})\n{neparne}")

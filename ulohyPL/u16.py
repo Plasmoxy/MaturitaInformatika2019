@@ -3,17 +3,10 @@
 
 from random import randint
 
-l = [ randint(-100, 100) for i in range(0, 100) ]
-print(f"Postupnost: {l}")
+l = sorted([ randint(-100, 100) for i in range(0, 100) ])
+parne = list(filter(lambda x: x % 2 == 0, l))
+neparne = list(filter(lambda x: x % 2 != 0, l))
 
-print("Párne: ")
-for c in l:
-  if c % 2 == 0:
-    print(c, end=", ")
-print()
-
-print("Nepárne: ")
-for c in l:
-  if c % 2 != 0:
-    print(c, end=", ")
-print()
+print(f"Postupnost: {len(l)}")
+print(f"Párne ({len(parne)})\n{parne}")
+print(f"Nepárne ({len(neparne)})\n{neparne}")
