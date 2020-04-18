@@ -1,2 +1,1 @@
-
-print(f"Nepárne ({len(neparne)})\n{neparne}")
+randint(1, 21)

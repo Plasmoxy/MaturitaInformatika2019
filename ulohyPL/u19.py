@@ -6,3 +6,10 @@
 # dddd
 # Posledný riadok je vytvorený zo zadaného písmena.
 
+p = input("Zadajte pismeno: ")[0]
+A = ord('a')
+P = ord(p)
+n = P - A + 1
+
+for i in range(0, n):
+  print( (i+1)*chr(A+i) )
